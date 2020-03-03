@@ -1,7 +1,7 @@
 import requests, urllib3
 urllib3.disable_warnings()
 
-ipaddress = input('CUCM IP Address: ')
+# Coletando informacoes do servidor
 username = input('CUCM Username: ')
 password = input('CUCM Password: ')
 url = 'https://' + ipaddress + ':8443/axl/'
@@ -9,7 +9,7 @@ url = 'https://' + ipaddress + ':8443/axl/'
 
 homecluster = input("Habilitar ou desabilitar o Home Cluster (t/f): ")
 
-
+#Abrindo o arquito txt
 with open ('lista_usuarios.txt') as arquivo:
     for linha in arquivo:
         usuario = linha.rstrip("\n")
